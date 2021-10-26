@@ -1,253 +1,107 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:800i&display=swap');
-
-button{
-    background-color: transparent;
-    border: 0;
-    transition: 0.3s;
-    margin: 10px;
-
-    
+body {
+    background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%);
+    background-blend-mode: normal, normal, screen, overlay, normal;
+    background-attachment: fixed;
 }
-
-.container-fluid{
-    position: fixed;
-}
-
-.btnnightmode{
-    background-color: transparent;
-    border: 0;
-    transition: 0.3s;
-    margin: 10px;
-    color: white;
-
-}
-
-
-button:hover{
-    border-radius: 50px;
-    font-size: 18px;
-    box-shadow: 1px 1px 25px 1px  black;
-    
-}
-
-.btnnightmode:hover{
-    border-radius: 50px;
-    font-size: 18px;
-    box-shadow: 1px 1px 25px 1px  darkgray;
-}
-
-hr{
-    border: black solid 5px;
-}
-
-
-
-
 
 .wrapper {
-
-  top: 0;
-  left: 0;
-  transform: translate(0, 0);
-  
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
 }
 
 #hide-checkbox {
-  opacity: 0;
-  height: 0;
-  width: 0;
+    opacity: 0;
+    height: 0;
+    width: 0;
 }
 
 .toggle {
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  width: 50px;
-  height: 30px;
-  background: #211042;
-  border-radius: 50px;
-  transition: 500ms;
-  overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    background: #211042;
+    border-radius: 50px;
+    transition: 500ms;
+    overflow: hidden;
 }
 
 .toggle-button {
-  position: absolute;
-  display: inline-block;
-  top: 2px;
-  left: 3px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #FAEAF1;
-  overflow: hidden;
-  box-shadow: 0 0 35px 4px rgba(255, 255, 255);
-  transition: all 500ms ease-in-out;
+    position: absolute;
+    display: inline-block;
+    top: 2px;
+    left: 3px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FAEAF1;
+    overflow: hidden;
+    box-shadow: 0 0 35px 4px rgba(255, 255, 255);
+    transition: all 500ms ease-in-out;
 }
-
-
 
 @keyframes travel {
-  0% {
-    transform: rotate(-45deg) translateX(70px);
-  }
-
-  50% {
-    transform: rotate(-45deg) translateX(-20px);
-    box-shadow: 5px 0px 6px 1px #FFF;
-  }
-
-  100% {
-    transform: rotate(-45deg) translateX(-30px);
-    width: 2px;
-    height: 2px;
-    opacity: 0;
-    box-shadow: none;
-  }
+    0% {
+        transform: rotate(-45deg) translateX(70px);
+    }
+    50% {
+        transform: rotate(-45deg) translateX(-20px);
+        box-shadow: 5px 0px 6px 1px #FFF;
+    }
+    100% {
+        transform: rotate(-45deg) translateX(-30px);
+        width: 2px;
+        height: 2px;
+        opacity: 0;
+        box-shadow: none;
+    }
 }
 
-#hide-checkbox:checked + .toggle {
-  background: #24D7F7;
+#hide-checkbox:checked+.toggle {
+    background: #24D7F7;
 }
 
-#hide-checkbox:checked + .toggle .toggle-button {
-  background: #F7FFFF;
-  transform: translateX(20px);
-  box-shadow: 0 0 35px 5px rgba(255, 255, 255);
+#hide-checkbox:checked+.toggle .toggle-button {
+    background: #F7FFFF;
+    transform: translateX(20px);
+    box-shadow: 0 0 35px 5px rgba(255, 255, 255);
 }
-
 
 @keyframes move {
-  0% {
-    transform: none;
-  }
-  
-  25% {
-    transform: translateX(2px);
-  }
-  
-  100% {
-    transform: translateX(-2px);
-  }
+    0% {
+        transform: none;
+    }
+    25% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(-2px);
+    }
 }
 
-h1{
-    color: black;   
-    opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 2s;
-
-}
-@keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+li:active {
+    background-color: red;
 }
 
-h1.night{
-    color: white;   
-    opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 2s;
-
-}
-@keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-body{
-    background-image: url(img/sky.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    transition: 1.0s;
-    height: auto;
-}
-
-body.nightmode{
-    background-image: url(img/stars.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    transition:1.0s;
-    height: auto;
-}
-
-div#profile{
-    /* border: black solid 2px; */
-    box-shadow: darkgray 20px 20px 10px;
-    transition: 0.5s;
-    background-image: url(img/day2.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.welcomeBanner {
+    margin: 15% 8%;
+    background: rgba(255, 246, 246, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.2px);
+    -webkit-backdrop-filter: blur(1.2px);
+    border: 1px solid rgba(255, 255, 255, 0.02);
     height: 80vh;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    
-
-}
-div#nightprofile{
-    /* border: white solid 2px; */
-    box-shadow: gray -15px 15px 10px ;
-    transition: 0.5s;
-    background-image: url(img/night.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 80vh;
-
-
 }
 
-#glass{
-    background-color: rgba(255, 255, 255, .15);  
-    backdrop-filter: blur(10px);
-    position: inherit;
-    margin: 30px;
-    width: 92%;
-    height: auto;
-    box-shadow: black 10px 10px 5px ;
-    transition: 1.0s;
-
-}
-#glassnight{
-    background-color: rgba(255, 255, 255, .15);  
-    backdrop-filter: blur(30px);
-    position: inherit;
-    margin: 30px;
-    width: 92%;
-    height: auto;
-    box-shadow: black -10px 10px 5px ;
-    transition: 1.0s;
-
+.introduction {
+    padding: 12%;
+    text-align: center;
+    line-height: 200%;
 }
 
-
-
-
-
-
+nav {
+    background-color: rgba(240, 240, 250, 1);
+}

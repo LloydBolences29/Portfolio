@@ -1,8 +1,8 @@
-const button = document.querySelectorAll("button")
+const button = document.querySelectorAll(".btn")
 const wrapper = document.querySelector(".wrapper")
 const body = document.querySelector("body")
 const h1 = document.querySelectorAll("h1")
-const profile = document.querySelector("#profile")
+const home = document.querySelector("#home")
 const glass = document.querySelector("#glass")
 
 
@@ -20,8 +20,8 @@ wrapper.addEventListener('change', e => {
             button.classList.remove('btnnightmode');
             console.log('change');
         })
-        profile.removeAttribute("id");
-        profile.setAttribute("id", "profile");
+        home.removeAttribute("id");
+        home.setAttribute("id", "home");
         glass.removeAttribute("id");
         glass.setAttribute("id", "glass")
 
@@ -36,8 +36,8 @@ wrapper.addEventListener('change', e => {
         button.forEach(button => {
             button.classList.add('btnnightmode');
         })
-        profile.removeAttribute("id")
-        profile.setAttribute("id","nightprofile");
+        home.removeAttribute("id")
+        home.setAttribute("id","nighthome");
         glass.removeAttribute("id")
         glass.setAttribute("id","glassnight");
     
